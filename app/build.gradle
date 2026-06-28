@@ -5,11 +5,11 @@ plugins {
 
 android {
     compileSdk 34
+    namespace "com.example.chromeautomator"
 
     defaultConfig {
         applicationId "com.example.chromeautomator"
-        minSdk 26          // Android 8.0 — GestureDescription disponible desde API 24,
-                           // pero Android 8 es mínimo razonable hoy
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -17,9 +17,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false   // Pon 'true' en producción con proguard-rules
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug   // GitHub Actions firmará con debug key
         }
         debug {
             applicationIdSuffix ".debug"
@@ -38,10 +37,7 @@ android {
 }
 
 dependencies {
-    // AppCompat para AppCompatActivity y temas Material
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    // Material (opcional pero recomendado para UI coherente)
     implementation 'com.google.android.material:material:1.11.0'
-    // Core KTX para extensiones de Kotlin en Android
     implementation 'androidx.core:core-ktx:1.12.0'
 }
