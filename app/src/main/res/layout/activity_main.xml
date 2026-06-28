@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chrome Automator"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Estado del servicio de accesibilidad -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprobando servicio..."
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para ir a Ajustes de Accesibilidad -->
+    <Button
+        android:id="@+id/btnEnable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activar en Ajustes"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Campo de texto para la búsqueda -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="¿Qué quieres buscar en Google?"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para ejecutar la automatización -->
+    <Button
+        android:id="@+id/btnRun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🚀 Buscar en Chrome"
+        android:enabled="false" />
+
+</LinearLayout>

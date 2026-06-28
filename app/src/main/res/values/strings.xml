@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chrome Automator</string>
+    <string name="accessibility_service_label">Chrome Automator</string>
+    <string name="accessibility_service_description">
+        Permite a Chrome Automator detectar y controlar elementos en pantalla
+        para automatizar búsquedas en Chrome y otras apps.
+        No recopila datos personales.
+    </string>
+</resources>

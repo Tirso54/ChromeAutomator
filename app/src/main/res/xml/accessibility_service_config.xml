@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Configuración del AccessibilityService.
+    Aquí defines QUÉ eventos escuchas y en QUÉ apps.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <!--
+        Tipos de eventos que el servicio recibirá:
+        - TYPE_WINDOW_STATE_CHANGED  → cuando cambia la ventana activa (Chrome abre una pantalla)
+        - TYPE_WINDOW_CONTENT_CHANGED → cuando cambia el contenido (página cargada, resultados aparecen)
+        - TYPE_VIEW_CLICKED          → cuando el usuario pulsa algo (útil para depuración)
+    -->
+    android:accessibilityEventTypes="
+        typeWindowStateChanged|
+        typeWindowContentChanged|
+        typeViewClicked"
+
+    <!--
+        Paquetes que vamos a monitorizar.
+        Puedes añadir más separados por comas.
+        Dejar vacío = monitoriza TODAS las apps (más consumo de batería).
+    -->
+    android:packageNames="com.android.chrome,com.google.android.googlequicksearchbox"
+
+    <!--
+        Capacidades del servicio:
+        - canRetrieveWindowContent     → leer el árbol de vistas (IMPRESCINDIBLE)
+        - canPerformGestures           → simular toques y gestos
+        - canRequestFilterKeyEvents    → interceptar teclas (opcional)
+    -->
+    android:accessibilityFlags="flagReportViewIds|flagRequestEnhancedWebAccessibility"
+
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="true"
+    android:canRequestFilterKeyEvents="false"
+
+    <!--
+        Descripción que ve el usuario en Ajustes > Accesibilidad
+    -->
+    android:description="@string/accessibility_service_description"
+
+    <!--
+        settingsActivity: si tienes una pantalla de ajustes propia,
+        ponla aquí. Lo dejamos vacío por ahora.
+    -->
+    android:settingsActivity=""
+
+    android:notificationTimeout="100" />

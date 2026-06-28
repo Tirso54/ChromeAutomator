@@ -1,0 +1,2 @@
+rootProject.name = "ChromeAutomator"
+include ':app'
